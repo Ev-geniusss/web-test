@@ -1,11 +1,10 @@
 const router = require('express').Router();
-const { user } = require('../db/models');
+const { Users } = require('../db/models/user');
 
 router.get('/', async (req, res) => {
   try {
-    const allUser = await user.findAll();
-    // console.log('==========>', allVacancies);
-    res.json(allUser);
+    const allUsers = await Users.findAll();
+    res.json(allUsers);
   } catch (err) {
     // console.log('ERROR:', err);
     res.sendStatus(404);

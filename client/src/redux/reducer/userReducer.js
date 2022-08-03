@@ -1,5 +1,5 @@
 
-import { GET_ALL_USERS } from '../types/userTypes';
+import { GET_ALL_USERS } from '../constants';
 
 const usersReducer = (state = [], action) => {
   const { type, payload } = action;
